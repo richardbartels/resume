@@ -21,7 +21,15 @@
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
 \LoadClass[11pt,a4]{article} % Font size and paper type
-\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkbordercolor = {white},
+    urlcolor = blue,
+}
 
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
@@ -36,7 +44,7 @@
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
 
-\def \addressSep {$\diamond$} % Set default address separator to a diamond
+\def \addressSep {$\bullet$} % Set default address separator to a bullet
 
 % One, two or three address lines can be specified 
 \let \@addressone \relax

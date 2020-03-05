@@ -21,17 +21,16 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass{resume} % Use the custom resume.cls style
-\usepackage{bibentry}
+
 
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 
 \name{Richard T. Bartels} % Your name
 \address{Europaplein 1299, 3526WZ Utrecht, The Netherlands}\\ % Your address
-\address{+31~(0)611342709 \\ richard.t.bartels@gmail.com} % Your phone number and email
-\address{6 November 1990 \\ Gennep, The Netherlands \\ Dutch} % Your address
+\address{+31~(0)611342709 \\ richard.t.bartels@gmail.com} \\% Your phone number and email
+\address{6 November 1990 \\ Gennep, The Netherlands} % Your address
 
 \begin{document}
-
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
@@ -39,10 +38,9 @@
 \begin{rSection}{Education}
 
 \begin{rSubsection}{PhD Physics (cum laude)}{September 2014 - August 2018}{University of Amsterdam}{Amsterdam, NL}
-\item Thesis: "All the Light We Cannot See"
-\item Supervisor: Dr.~Christoph Weniger
+\item Thesis: "All the Light We Cannot See" (supervisor: Dr.~Christoph Weniger)
 \item Topics: (astro-)particle physics, dark matter, statistics and data analysis.
-\item Published 9 papers in peer-reviewed journals.
+\item Published 9 papers in high-impact peer-reviewed journals.
 \end{rSubsection}
 
 %------------------------------------------------
@@ -87,10 +85,10 @@
 \begin{rSection}{Skills}
 
 \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-General & Excellent communication and professional writing skills \\
+General & Excellent communication and professional writing skills. \\
 Languages & Dutch (native), English (fluent), German and French (elementary) \\ \\
 Computer Languages & Python (expert), C++ (intermediate), Matlab/Octave (intermediate) \\
-Techniques & Knowledge of machine learning, deep Learning and statistics (frequentist and Bayesian and the major python packages to implement these.
+Packages & Tensorflow, PyTorch, scikit-learn, numpy, scipy, pandas etc.
 \end{tabular}
 
 \end{rSection}
@@ -119,42 +117,11 @@ My hobbies include a variety of endurance sport such as triathlon (Ironman), ult
 
 %----------------------------------------------------------------------------------------
 \newpage
-
-%----------------------------------------------------------------------------------------
-
-%----------------------------------------------------------------------------------------
-%	Academic Appendix
-%----------------------------------------------------------------------------------------
-% \begin{Section}{Academic appendix}
-\title{{Academic appendix}}
-\hfil{\Large{\bf Academic Appendix}}\hfil\\
-\nameskip\break
-\nobibliography{ref}
-\bibliographystyle{plain}
-\begin{rSection}{Publications}
-  \begin{enumerate}
-    \item \bibentry{Bartels:2018qgr}
-    \item \bibentry{Bartels:2018xom}
-    \item \bibentry{Bartels:2018eyb}
-    \item \bibentry{Bartels:2017vsx}
-    \item \bibentry{Bartels:2017xba}
-    \item \bibentry{Bartels:2017dpb}
-    \item \bibentry{Bartels:2015uba}
-    \item \bibentry{Bartels:2015aea}
-    \item \bibentry{Bartels:2015kpa}
-  \end{enumerate}
-%Section content\ldots
-\end{rSection}
-%------------------------------------------------
-\begin{rSection}{Selected conference contributions}
-  \begin{itemize}
-    \item Very High Energy Phenomena in the Universe - Quy Nhon, Vietnam (12-18 August 2018) - invited review talk.
-    \item 3 Elephants in the Gamma-Ray Sky - Garmish-Partenkirchen, Germany (21-24 October 2017) - invited talk.
-  \end{itemize}
-
-\end{rSection}
-
-% \end{Section}
+\include{certificates}
+\newpage
+\include{academic}
+\newpage
+% \newpage
 %----------------------------------------------------------------------------------------
 
 \end{document}
