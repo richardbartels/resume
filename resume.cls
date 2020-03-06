@@ -21,6 +21,7 @@
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
 \LoadClass[11pt,a4]{article} % Font size and paper type
+\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{natbib}
 \usepackage{bibentry}
