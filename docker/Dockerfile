@@ -1,2 +1,6 @@
-FROM harshjv/texlive-2015
-RUN tlmgr update --self --all
+FROM sharelatex/sharelatex-base:latest
+#WORKDIR /
+#RUN mkdir workdir
+#WORKDIR /workdir
+RUN echo Workdir: "$PWD"
+#RUN mkdir texfiles

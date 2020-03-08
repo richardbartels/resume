@@ -4,7 +4,7 @@ services:
   - docker
 branches:
   only:
-    - website
+    - gh-pages
 before_install:
   - sudo docker build -t texlive docker
 install:

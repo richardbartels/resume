@@ -23,6 +23,7 @@
 \LoadClass[11pt,a4]{article} % Font size and paper type
 \renewcommand{\familydefault}{\sfdefault}
 
+
 \usepackage{natbib}
 \usepackage{bibentry}
 \usepackage{hyperref}

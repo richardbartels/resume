@@ -4,7 +4,7 @@ PDFFILE = cv.pdf
 BASEDIR=$(CURDIR)
 OUTPUTDIR=$(BASEDIR)/output
 
-GITHUB_PAGES_BRANCH=master
+GITHUB_PAGES_BRANCH=gh-pages
 
 help:
 	@echo 'Makefile for automatic LaTeX compilation                                  '
@@ -21,7 +21,7 @@ clean:
 
 build:
 	mkdir $(OUTPUTDIR)
-	sudo docker run -it -v $(BASEDIR):/var/texlive texlive sh -c "pdflatex $(TEXFILE)"
+	sudo docker run -it -v $(BASEDIR):/opt/qpdf-6.0.0 texlive sh -c "pdflatex $(TEXFILE)"
 	mv $(PDFFILE) $(OUTPUTDIR)
 	cp CNAME $(OUTPUTDIR)
 	cp index.html $(OUTPUTDIR)
