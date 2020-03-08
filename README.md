@@ -7,22 +7,24 @@ The code was adapted from [this repository](https://github.com/thomastweets/cv-o
 When you clone or fork this repository make sure that you enable it on [TravisCI](https://travis-ci.org).
 
 #### TravisCI API key
-As Travis CI needs to be able to push to your GitHub repository (specifically the `gh-pages` branch) you need to authenticate it.
+As Travis CI needs to be able to push to your GitHub repository, you need to authenticate it.
 As you do not want to store any passwords, ssh, or API keys in your repo or the TravisCI configuration the easiest way is to use the
 `travis` command line tool that is available as a gem to encrypt an Authentication Token for GitHub so that Travis CI 
 can decrypt it when needed. First we need to install it:
 ```bash
-# on OSX using the default Ruby installation
-sudo gem install travis
+# on OSX using brew
+brew install travis
 ```
 Now we create a personal access token on GitHub to use with Travis CI. Follow
 [these instructions](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) 
 to do so. Copy the token when you created 
 it as you will not be able to see it again after you close the page.
+Similar to the reposotiry this code is adapted from, I named it `TravisCI cv-on-ghpages` and kept the standard scope settings.
+Make sure Travis CI can find your repository.
 Encrypt the token with the `travis` command line tool:
 ```bash
 # where 'your_token' is the token from the last step
-travis encrypt GH_TOKEN=your_token
+travis encrypt --org --skip-verison-check GH_TOKEN=your_token
 ```
 Copy the resulting key to line 18 of the `.travis.yml` file (replace `yoursecret` but keep the quotes):
 ```yml
