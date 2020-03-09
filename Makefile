@@ -1,4 +1,5 @@
 TEXFILE = cv.tex
+AUXFILE = cv.aux
 PDFFILE = cv.pdf
 
 BASEDIR=$(CURDIR)
@@ -21,7 +22,13 @@ clean:
 
 build:
 	mkdir $(OUTPUTDIR)
-	sudo docker run -it -v $(BASEDIR):/opt/qpdf-6.0.0 texlive sh -c "pdflatex $(TEXFILE)"
+	sudo docker run -it -v $(BASEDIR):/opt/qpdf-6.0.0 texlive\
+	 sh -c "tlmgr update --self --all &&\
+	  tlmgr install pdfescape letltxmacro bitset parskip etoolbox &&\
+	   pdflatex $(TEXFILE) &&\
+	    bibtex $(AUXFILE) &&\
+	     pdflatex $(TEXFILE) &&\
+	      pdflatex $(TEXFILE)"
 	mv $(PDFFILE) $(OUTPUTDIR)
 	cp CNAME $(OUTPUTDIR)
 	cp index.html $(OUTPUTDIR)
