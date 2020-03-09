@@ -5,7 +5,7 @@ PDFFILE = cv.pdf
 BASEDIR=$(CURDIR)
 OUTPUTDIR=$(BASEDIR)/output
 
-GITHUB_PAGES_BRANCH=gh-pages
+GITHUB_PAGES_BRANCH=website
 
 help:
 	@echo 'Makefile for automatic LaTeX compilation                                  '
@@ -25,12 +25,11 @@ build:
 	sudo docker run -it -v $(BASEDIR):/opt/qpdf-6.0.0 texlive\
 	 sh -c "tlmgr update --self --all &&\
 	  tlmgr install pdfescape letltxmacro bitset parskip etoolbox &&\
-	   pdflatex $(TEXFILE) &&\
+	   pdflatex -interaction nonstopmode $(TEXFILE) &&\
 	    bibtex $(AUXFILE) &&\
-	     pdflatex $(TEXFILE) &&\
-	      pdflatex $(TEXFILE)"
+	     pdflatex -interaction nonstopmode $(TEXFILE) &&\
+	      pdflatex -interaction nonstopbmode $(TEXFILE)"
 	mv $(PDFFILE) $(OUTPUTDIR)
-	cp CNAME $(OUTPUTDIR)
 	cp index.html $(OUTPUTDIR)
 
 github:

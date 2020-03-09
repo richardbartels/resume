@@ -29,7 +29,7 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks = true,
-    linkbordercolor = {white},
+%    linkbordercolor = {white},
     urlcolor = blue,
 }
 
@@ -112,7 +112,7 @@
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1.5em} % Margin within the section
   }
-  \item[]
+  \item[] 
 }{
   \end{list}
 }
@@ -129,6 +129,7 @@
   }\smallskip
   \begin{list}{$\cdot$}{\leftmargin=1em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+    \item[] 
   }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
