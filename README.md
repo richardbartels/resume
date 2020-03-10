@@ -19,7 +19,7 @@ Now we create a personal access token on GitHub to use with Travis CI. Follow
 [these instructions](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) 
 to do so. Copy the token when you created 
 it as you will not be able to see it again after you close the page.
-Similar to the reposotiry this code is adapted from, I named it `TravisCI cv-on-ghpages` and kept the standard scope settings.
+The `repo` [scope settings](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) should be enabled on GitHub.
 Make sure Travis CI can find your repository.
 Encrypt the token with the `travis` command line tool:
 ```bash
