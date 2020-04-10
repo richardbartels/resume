@@ -5,7 +5,7 @@ PDFFILE = cv.pdf
 BASEDIR=$(CURDIR)
 OUTPUTDIR=$(BASEDIR)/output
 
-GITHUB_PAGES_BRANCH=website
+GITHUB_PAGES_BRANCH=master
 
 help:
 	@echo 'Makefile for automatic LaTeX compilation                                  '
