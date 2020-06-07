@@ -28,7 +28,7 @@
 \usepackage{bibentry}
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks = true,
+    colorlinks = false,
 %    linkbordercolor = {white},
     urlcolor = blue,
 }

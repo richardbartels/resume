@@ -26,11 +26,28 @@
 \usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
 \usepackage{fontawesome} 
 \usepackage{courier} % For courier font for computer packages
+%\usepackage{academicons}
+%\definecolor{orcidlogocol}{HTML}{A6CE39}]
 
+
+\newcommand{\separator}{~\addressSep~}
 \name{Richard T. Bartels} % Your name
-\address{Europaplein 1299, 3526WZ Utrecht, The Netherlands} % Your address
-\address{+31~(0)611342709 \\ richard.t.bartels@gmail.com} % Your phone number and email
-\address{6 November 1990 \\ Gennep, The Netherlands} % Your address
+\address{%
+\begin{tabular}{c}
+	6 November 1990, Gennep, The Netherlands \\
+	\faicon{home}~Europaplein 1299, 3526WZ Utrecht, The Netherlands\\
+	\faicon{phone}~+31~(0)611342709 ~\addressSep~ \faicon{envelope}~richard.t.bartels@gmail.com \\
+	\faicon{github}~\href{https://github.com/richardbartels}{richardbartels} ~\addressSep~ ORCiD: \href{https://orcid.org/0000-0001-7214-8029}{0000-0001-7214-8029}
+	~\addressSep~ \href{https://www.linkedin.com/in/richard-tony-bartels/}{\faicon{linkedin}}
+	\\
+\end{tabular}
+}
+
+%\name{Richard T. Bartels} % Your name
+%\address{Europaplein 1299, 3526WZ Utrecht, The Netherlands} % Your address
+%\address{+31~(0)611342709 \\ richard.t.bartels@gmail.com} % Your phone number and email
+%\address{6 November 1990 \\ Gennep, The Netherlands} % Your address
+%\address{\faicon{github}}
 
 \begin{document}
 %----------------------------------------------------------------------------------------
@@ -40,27 +57,28 @@
 \begin{rSection}{Education}
 
 \begin{rSubsection}{PhD Physics (cum laude)}{September 2014 - August 2018}{University of Amsterdam}{Amsterdam, NL}
+\vspace{-1.5em}
 \item Thesis: "All the Light We Cannot See" (supervisor: Dr.~Christoph Weniger)
 \item Topics: (astro-)particle physics, dark matter, statistics and data analysis.
 \item Published 9 papers in high-impact peer-reviewed journals.
 \end{rSubsection}
 
 %------------------------------------------------
-
 \begin{rSubsection}{M.~Sc.~Physics (cum laude)}{February 2013 - August 2014}{University of Amsterdam}{Amsterdam, NL}
+\vspace{-1.5em}
 \end{rSubsection}
 
 %------------------------------------------------
-
 \begin{rSubsection}{Education Abroad Program}{September 2012 - December 2012}{University of California, Berkeley}{Berkeley, CA}
+\vspace{-1.5em}
 % \item
 \end{rSubsection}
 
 %------------------------------------------------
-
 \begin{rSubsection}{B.~Sc.~Liberal Arts \& Sciences (summa cum laude)}{September 2009 - January 2013}{University College Utrecht}{Utrecht, NL}
-% \item Major: physics and mathematics
-% \item Minors: history, philosphy
+\vspace{-1.5em}
+ \item Major: physics and mathematics
+ \item Minors: history, philosphy
 \end{rSubsection}
 \end{rSection}
 
@@ -71,6 +89,7 @@
 \begin{rSection}{Experience}
 
 \begin{rSubsection}{Vantage AI}{September 2018 - Present}{Data Scientist}{Nieuwegein, NL}
+\vspace{-1.5em}
 \item Data science consultant at various companies, ranging from start-up scale to large governmental organisations.	
 \item Putting machine learning and deep learning algorithms (computer vision) in production.
 \item Responsible for organising the weekly Vantage training program, which offers soft- and hard-skill training.
