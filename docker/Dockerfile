@@ -1,2 +1,1 @@
-FROM sharelatex/sharelatex-base:latest
-RUN echo Workdir: "$PWD"
+FROM miktex/miktex:latest
