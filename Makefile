@@ -28,7 +28,7 @@ build:
 	   pdflatex -interaction nonstopmode $(TEXFILE) &&\
 	    bibtex $(AUXFILE) &&\
 	     pdflatex -interaction nonstopmode $(TEXFILE) &&\
-	      pdflatex -interaction nonstopbmode $(TEXFILE)"
+	      pdflatex -interaction nonstopmode $(TEXFILE)"
 	mv $(PDFFILE) $(OUTPUTDIR)
 	cp index.html $(OUTPUTDIR)
 
