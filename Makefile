@@ -22,13 +22,13 @@ clean:
 
 build:
 	mkdir $(OUTPUTDIR)
-    sudo docker run -it -v $(BASEDIR):/miktex/work miktex/miktex\
-     sh -c "mpm --admin --install=fontawesome5 &&\
-      mpm --admin --update &&\
-       pdflatex -interaction nonstopmode $TEXFILE &&\
-        bibtex $AUXFILE &&\
-         pdflatex -interaction nonstopmode $TEXFILE &&\
-          pdflatex -interaction nonstopbmode $TEXFILE"
+	sudo docker run -it -v $(BASEDIR):/miktex/work miktex/miktex\
+	 sh -c "mpm --admin --install=fontawesome5 &&\
+	  mpm --admin --update &&\&&\
+	   pdflatex -interaction nonstopmode $(TEXFILE) &&\
+	    bibtex $(AUXFILE) &&\
+	     pdflatex -interaction nonstopmode $(TEXFILE) &&\
+	      pdflatex -interaction nonstopbmode $(TEXFILE)"
 	mv $(PDFFILE) $(OUTPUTDIR)
 	cp index.html $(OUTPUTDIR)
 
