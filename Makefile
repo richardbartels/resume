@@ -24,7 +24,7 @@ build:
 	mkdir $(OUTPUTDIR)
 	sudo docker run -it -v $(BASEDIR):/miktex/work miktex/miktex\
 	 sh -c "mpm --admin --install=fontawesome5 &&\
-	  mpm --admin --update &&\&&\
+	  mpm --admin --update &&\
 	   pdflatex -interaction nonstopmode $(TEXFILE) &&\
 	    bibtex $(AUXFILE) &&\
 	     pdflatex -interaction nonstopmode $(TEXFILE) &&\
