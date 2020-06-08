@@ -8,10 +8,11 @@ docker build -t miktex/miktex docker
 docker run -it -v $BASEDIR:/miktex/work miktex/miktex\
  sh -c "mpm --admin --install=fontawesome5 &&\
   mpm --admin --update &&\
-   pdflatex -interaction nonstopmode $TEXFILE &&\
-    bibtex $AUXFILE &&\
-     pdflatex -interaction nonstopmode $TEXFILE &&\
-      pdflatex -interaction nonstopbmode $TEXFILE"
+   initexmf --mkmaps &&\
+    pdflatex -interaction nonstopmode -halt-on-error -file-line-error $TEXFILE &&\
+     bibtex $AUXFILE &&\
+      pdflatex -interaction nonstopmode -halt-on-error -file-line-error $TEXFILE &&\
+       pdflatex -interaction nonstopmode -halt-on-error -file-line-error $TEXFILE"
 
 rm *.aux
 rm *.log
