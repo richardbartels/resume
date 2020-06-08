@@ -22,7 +22,7 @@ clean:
 
 build:
 	mkdir $(OUTPUTDIR)
-    sudo docker run -it -v $BASEDIR:/miktex/work miktex/miktex \
+    sudo docker run -it -v $(BASEDIR):/miktex/work miktex/miktex\
      sh -c "mpm --admin --install=fontawesome5 &&\
       mpm --admin --update &&\
        pdflatex -interaction nonstopmode $TEXFILE &&\
