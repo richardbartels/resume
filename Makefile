@@ -25,7 +25,7 @@ build:
 	sudo docker run -it -v $(BASEDIR):/miktex/work miktex/miktex\
 	 sh -c "mpm --admin --install=fontawesome5 &&\
 	  mpm --admin --update &&\
-       initexmf --mkmaps
+       initexmf --mkmaps &&\
 	    pdflatex -interaction nonstopmode -halt-on-error -file-line-error $(TEXFILE) &&\
 	     bibtex $(AUXFILE) &&\
 	      pdflatex -interaction nonstopmode -halt-on-error -file-line-error $(TEXFILE) &&\
