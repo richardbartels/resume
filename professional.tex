@@ -8,11 +8,6 @@
 \begin{rSection}{Online certificates}
 %------------------------------------------------
   \begin{itemize}
-    \item{\it AI for Medical Diagnosis} -- deeplearning.ai on Coursera.
-    \hef{https://coursera.org/share/aea6e47d93de58241709766351f714aa}{Certificate} earned on October 30, 2020.
-    %
-    \item{\it Building a Data Science Team} -- Johns Hopkins University on Coursera.
-    \hef{https://coursera.org/share/9d296dc31002fa58759569a1e2ebcddc}{Certificate} earned on July 14, 2020.
     %
     \item{\it Taming Big Data with Apache Spark and Python - Hands On!} -- by Sundog Education on Udemy. \href{https://www.udemy.com/certificate/UC-G53DWS5V/}{Certificate} earned on April 15, 2019.
     %
@@ -34,110 +29,110 @@
   \end{itemize}
 \end{rSection}
 
-%%------------------------------------------------
-%\begin{rSection}{Further information: work experience}
-%%------------------------------------------------
-%\begin{rSubsection}{Sensing Clues}{December 2019 - Present}{Data Scientist (through Vantage AI)}{Nieuwegein, The Netherlands}
-%Sensing Clues is a not-for-profit organisation which offers an analysis platform for wildlife parks throughout the world.
-%Information is collected by rangers through an (offline) app, which connects to the platform.
-%I did the acquisition and as part of the Vantage for Social Good initiative I was given limited time to work pro-bono for Sensing Clues.
+%------------------------------------------------
+\begin{rSection}{Further information: work experience}
+%------------------------------------------------
+\begin{rSubsection}{Sensing Clues}{December 2019 - Present}{Data Scientist (through Vantage AI)}{Nieuwegein, The Netherlands}
+Sensing Clues is a not-for-profit organisation which offers an analysis platform for wildlife parks throughout the world. 
+Information is collected by rangers through an (offline) app, which connects to the platform.
+I did the acquisition and as part of the Vantage for Social Good initiative I was given limited time to work pro-bono for Sensing Clues.
+
+My role is to orchestrate projects related to computer vision and help identify use cases.
+A first use case we started is the automatic detection of animals in cameratraps, such that this information can be efficiently included in the platform.
+Together with a colleague I created a single algorithm which can be used for parks throughout the world. 
+The algorithm was developed using data from the \href{https://www.kaggle.com/c/iwildcam-2020-fgvc7/leaderboard}{iWildCam 2020} competition on Kaggle,
+where we ended in the top 5.
+Currently we are in the process of taking the first version to production.
+
+{\bf Skills}: object detection, use-case discovery\\
+{\bf Tools}: TensorFlow, TensorFlow Extended, Flask, Kubernetes, Docker
+\end{rSubsection}
+
+%------------------------------------------------
+\begin{rSubsection}{ProRail}{May 2019 - Present}{Data Scientist (through Vantage AI)}{Utrecht, The Netherlands}
+ProRail is the owner and maintainer of the railway infrastructure in the Netherlands.
+Twice a year, a videotrain captures images of the entire railway network of the Netherlands, from 10 different 
+camera perspectives. 
+Just the two cameras focused on the top of the railway track already take 50 million images during each campaign.
+These images are inspected manually to find defects. However, it is impossible to manually assess all images.
+As such, ProRail has the ambition to automate certain tasks by means of computer vision.
+At first, they want to locate all insulation joints in the Netherlands and monitor and correct the location information in
+their SAP database. Next, it is their goal to also look at the condition and degeneration of various assets.
+
+The project entailed creating a convolutional neural network to detect insulation-joints in images and putting it in production
+This project had high business impact, since malfunctioning insulation joints cause a large fraction of signalling failures,
+so accurate knowledge of their location is essential. Next to developing the algorithm, I was involved in setting up a
+production pipeline for which a package was created to read-in images, images are analysed, and finally results 
+are included in the asset database of ProRail.
+
+In addition, I created an object detection algorithm to supplement the aforementioned model,
+which adds additional information on each individual joint. Moreover, this algorithm also forms the basis
+for a proof of concept (PoC) to detect damaged railway fasteners.
+
+{\bf Skills}: computer vision, object detection, data science in production, stakeholder management, use-case discovery\\
+{\bf Tools}: TensorFlow, Azure Databricks, Azure Storage (Datalake, Blob), OpenCV
+\end{rSubsection}
+
+%------------------------------------------------
+\begin{rSubsection}{Intergamma}{February 2019 - March 2019}{Data Scientist (through Vantage AI)}{Leusden, The Netherlands}
+Intergamma is a large franchise-organisation for hardware stores. 
+Intergamma has an online shop, but it operates mostly through physical stores. 
+At the time of the assignment Intergamma was applying data science within a limited scope, namely e-commerce.
+However, they had the ambition to become more data-driven. 
+
+To explore the potential of data science for the organisation,
+a colleague and I were assigned the task to perform a use-case discovery, in particular outside of e-commerce.
+For this purpose I conducted interviews with various stakeholders and domain experts, and looked at data availability.
+
+In addition, two use cases were used to realise a proof-of-concept.
+First, I have done a market-basket analysis to optimise the in-store shelf layout. 
+For this purpose I analysed online and offline transactions by means of similarity matrices of products and product categories.
+By comparing online to offline cross-sell the shelf layout can potentially be further optimised. 
+The second PoC was about price elasticity and promotions and focused on the feasibility of optimising the optimal price
+with machine learning models.
+
+{\bf Skills}: use-case discovery, proof-of-concept, strategy\\
+{\bf Tools}: Python, Pandas, Google Cloud Platform, SQL (Netezza)
 %
-%My role is to orchestrate projects related to computer vision and help identify use cases.
-%A first use case we started is the automatic detection of animals in cameratraps, such that this information can be efficiently included in the platform.
-%Together with a colleague I created a single algorithm which can be used for parks throughout the world.
-%The algorithm was developed using data from the \href{https://www.kaggle.com/c/iwildcam-2020-fgvc7/leaderboard}{iWildCam 2020} competition on Kaggle,
-%where we ended in the top 5.
-%Currently we are in the process of taking the first version to production.
+\end{rSubsection}
+%------------------------------------------------
+\begin{rSubsection}{Stockon}{November 2018 - December 2018}{Data Scientist (through Vantage AI)}{Utrecht, The Netherlands}
 %
-%{\bf Skills}: object detection, use-case discovery\\
-%{\bf Tools}: TensorFlow, TensorFlow Extended, Flask, Kubernetes, Docker
-%\end{rSubsection}
+Stockon (discontinued) was an online supermarket operating through an app and delivering groceries through Post NL.
+One of their key selling points was to ease the process of doing groceries, by filling the shopping basket 
+for individual customers automatically through an algorithm that would predict individual consumption.
+However, initially this algorithm could only be used for the 15\% of customers who had a subscription for recurring orders.
+Moreover, it was implemented in TypeScript and not easy to update or maintain. 
+I was asked to make the algorithm applicable to all customers and create a microservice in the Google Cloud within a limited timespan.
+
+For this project I was the only data scientist, as such I sought active collaboration with the software developers responsible for ensuring functionality within the app.
+Together we devised a strategy to migrate the prediction algorithm to the cloud.
+I extended the existing algorithm, rewrote it in Python and created a microservice through a Flask API running
+in a Docker container in the Google App Engine. The result was a minimal-viable product serving
+100\% of customers by updating their shopping baskets on a daily basis.
+
+{\bf Skills}: data science in production, data engineering, agile and scrum methodology\\
+{\bf Tools}: Python, Pandas, Flask, Docker, Google App Engine.
 %
-%%------------------------------------------------
-%\begin{rSubsection}{ProRail}{May 2019 - Present}{Data Scientist (through Vantage AI)}{Utrecht, The Netherlands}
-%ProRail is the owner and maintainer of the railway infrastructure in the Netherlands.
-%Twice a year, a videotrain captures images of the entire railway network of the Netherlands, from 10 different
-%camera perspectives.
-%Just the two cameras focused on the top of the railway track already take 50 million images during each campaign.
-%These images are inspected manually to find defects. However, it is impossible to manually assess all images.
-%As such, ProRail has the ambition to automate certain tasks by means of computer vision.
-%At first, they want to locate all insulation joints in the Netherlands and monitor and correct the location information in
-%their SAP database. Next, it is their goal to also look at the condition and degeneration of various assets.
+\end{rSubsection}
+%------------------------------------------------
+\begin{rSubsection}{Winkelstraat.nl}{September 2018 - October 2018}{Data Scientist (through Vantage AI)}{Vianen, The Netherlands}
 %
-%The project entailed creating a convolutional neural network to detect insulation-joints in images and putting it in production
-%This project had high business impact, since malfunctioning insulation joints cause a large fraction of signalling failures,
-%so accurate knowledge of their location is essential. Next to developing the algorithm, I was involved in setting up a
-%production pipeline for which a package was created to read-in images, images are analysed, and finally results
-%are included in the asset database of ProRail.
+Winkelstraat.nl is a platform which connects customers to brick-and-mortar retailers of high-end fashion items by 
+offering the latter an opportunity to sell their products online. Consequently, Winkelstraat.nl gathers large amounts of
+data which could be of potential use to the affiliated retailers. It was my task to identify use-cases based on existing
+and potential data sources.
+
+For this project I connected multiple existing data sources and established key performance indicators (KPIs) for individual retailers.
+In addition, I suggested data sources which could help to further refine these KPIs.
+
+The results where presented in an interactive dashboard (Google Data Studio) tailored to individual users.
+
+{\bf Skills}: strategy, business intelligence, data visualisation and dashboarding, data science\\
+{\bf Tools}: Python, Pandas, Jupyter, Docker Google Cloud Platform, Google BigQuery, Google Data Studio
 %
-%In addition, I created an object detection algorithm to supplement the aforementioned model,
-%which adds additional information on each individual joint. Moreover, this algorithm also forms the basis
-%for a proof of concept (PoC) to detect damaged railway fasteners.
-%
-%{\bf Skills}: computer vision, object detection, data science in production, stakeholder management, use-case discovery\\
-%{\bf Tools}: TensorFlow, Azure Databricks, Azure Storage (Datalake, Blob), OpenCV
-%\end{rSubsection}
-%
-%%------------------------------------------------
-%\begin{rSubsection}{Intergamma}{February 2019 - March 2019}{Data Scientist (through Vantage AI)}{Leusden, The Netherlands}
-%Intergamma is a large franchise-organisation for hardware stores.
-%Intergamma has an online shop, but it operates mostly through physical stores.
-%At the time of the assignment Intergamma was applying data science within a limited scope, namely e-commerce.
-%However, they had the ambition to become more data-driven.
-%
-%To explore the potential of data science for the organisation,
-%a colleague and I were assigned the task to perform a use-case discovery, in particular outside of e-commerce.
-%For this purpose I conducted interviews with various stakeholders and domain experts, and looked at data availability.
-%
-%In addition, two use cases were used to realise a proof-of-concept.
-%First, I have done a market-basket analysis to optimise the in-store shelf layout.
-%For this purpose I analysed online and offline transactions by means of similarity matrices of products and product categories.
-%By comparing online to offline cross-sell the shelf layout can potentially be further optimised.
-%The second PoC was about price elasticity and promotions and focused on the feasibility of optimising the optimal price
-%with machine learning models.
-%
-%{\bf Skills}: use-case discovery, proof-of-concept, strategy\\
-%{\bf Tools}: Python, Pandas, Google Cloud Platform, SQL (Netezza)
-%%
-%\end{rSubsection}
-%%------------------------------------------------
-%\begin{rSubsection}{Stockon}{November 2018 - December 2018}{Data Scientist (through Vantage AI)}{Utrecht, The Netherlands}
-%%
-%Stockon (discontinued) was an online supermarket operating through an app and delivering groceries through Post NL.
-%One of their key selling points was to ease the process of doing groceries, by filling the shopping basket
-%for individual customers automatically through an algorithm that would predict individual consumption.
-%However, initially this algorithm could only be used for the 15\% of customers who had a subscription for recurring orders.
-%Moreover, it was implemented in TypeScript and not easy to update or maintain.
-%I was asked to make the algorithm applicable to all customers and create a microservice in the Google Cloud within a limited timespan.
-%
-%For this project I was the only data scientist, as such I sought active collaboration with the software developers responsible for ensuring functionality within the app.
-%Together we devised a strategy to migrate the prediction algorithm to the cloud.
-%I extended the existing algorithm, rewrote it in Python and created a microservice through a Flask API running
-%in a Docker container in the Google App Engine. The result was a minimal-viable product serving
-%100\% of customers by updating their shopping baskets on a daily basis.
-%
-%{\bf Skills}: data science in production, data engineering, agile and scrum methodology\\
-%{\bf Tools}: Python, Pandas, Flask, Docker, Google App Engine.
-%%
-%\end{rSubsection}
-%%------------------------------------------------
-%\begin{rSubsection}{Winkelstraat.nl}{September 2018 - October 2018}{Data Scientist (through Vantage AI)}{Vianen, The Netherlands}
-%%
-%Winkelstraat.nl is a platform which connects customers to brick-and-mortar retailers of high-end fashion items by
-%offering the latter an opportunity to sell their products online. Consequently, Winkelstraat.nl gathers large amounts of
-%data which could be of potential use to the affiliated retailers. It was my task to identify use-cases based on existing
-%and potential data sources.
-%
-%For this project I connected multiple existing data sources and established key performance indicators (KPIs) for individual retailers.
-%In addition, I suggested data sources which could help to further refine these KPIs.
-%
-%The results where presented in an interactive dashboard (Google Data Studio) tailored to individual users.
-%
-%{\bf Skills}: strategy, business intelligence, data visualisation and dashboarding, data science\\
-%{\bf Tools}: Python, Pandas, Jupyter, Docker Google Cloud Platform, Google BigQuery, Google Data Studio
-%%
-%\end{rSubsection}
-%\end{rSection}
+\end{rSubsection}
+\end{rSection}
 %----------------------------------------------------------------------------------------
 
 % Talks 
@@ -157,11 +152,11 @@
   \end{itemize}
 \end{rSection}
 
-%% Talks
-%\begin{rSection}{Workshops}
-%  \begin{itemize}
-%  	\item Computer vision with Tensorflow (with Joris Bukala) - Vantage AI (May - June 2020)
-%       	\item Bayesian methods in machine learning  (with Gerben Oostra) - Vantage AI (November - December 2019)
-%	\item Computer vision with Tensorflow 2.0 - Vantage AI (July - August 2019)
-%  \end{itemize}
-%\end{rSection}
+% Talks 
+\begin{rSection}{Workshops}
+  \begin{itemize}
+  	\item Computer vision with Tensorflow (with Joris Bukala) - Vantage AI (May - June 2020)
+       	\item Bayesian methods in machine learning  (with Gerben Oostra) - Vantage AI (November - December 2019)
+	\item Computer vision with Tensorflow 2.0 - Vantage AI (July - August 2019)
+  \end{itemize}
+\end{rSection}
