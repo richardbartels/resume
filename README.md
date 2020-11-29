@@ -4,7 +4,7 @@
 The code was adapted from [this repository](https://github.com/thomastweets/cv-on-ghpages).
 
 ### TravisCI
-When you clone or fork this repository make sure that you enable it on [TravisCI](https://travis-ci.com).
+When you clone or fork this repository make sure that you enable it on [TravisCI](https://travis-ci.org).
 
 #### TravisCI API key
 As Travis CI needs to be able to push to your GitHub repository, you need to authenticate it.
