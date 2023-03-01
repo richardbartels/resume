@@ -36,6 +36,12 @@ env:
 ### CNAME file (custom domain)
 Change the `CNAME` file to your needs if you want to be able to redirect a custom domain name to your CV. Refer to [GitHub](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/) for help in setting up a corresponding DNS entry at your DNS provider.
 
+## Local compilation
+To create the output pdf locally install a LaTeX distribution (e.g. [MiKTeX][https://miktex.org/]). 
+You can then `.make_local` (there is also a script using Docker there, but it doesn't work on the Mac chip). 
+It will require some packages, but it probably prompts for that automatically.
+
+
 ## Licence
 The CV template is adapted from
 Trey Hunter's [Medium Length Professional CV](https://www.latextemplates.com/template/medium-length-professional-cv) and downloaded from

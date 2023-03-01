@@ -4,5 +4,7 @@
 *.gz*
 *.pyc
 *.tar.gz
+*.pdf
+.DS_Store
 /env/
 /output/
