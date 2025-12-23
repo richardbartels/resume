@@ -4,5 +4,6 @@
 *.gz*
 *.pyc
 *.tar.gz
+*.pdf
 /env/
 /output/

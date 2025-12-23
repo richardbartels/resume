@@ -1,1 +1,0 @@
-FROM miktex/miktex:latest
