@@ -16,13 +16,14 @@
 %
 % Created by Trey Hunner and modified by www.LaTeXTemplates.com
 %
+% Changelog:
+% - FIX everything boldface. updated \bf in MakeUpperCase (see: https://tex.stackexchange.com/questions/662853/why-is-there-bold-font-across-the-entire-document)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
 
 \LoadClass[11pt,a4]{article} % Font size and paper type
 \renewcommand{\familydefault}{\sfdefault}
-
 
 \usepackage{natbib}
 \usepackage{bibentry}
@@ -78,7 +79,7 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
-    \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \hfil{\MakeUppercase{\namesize\textbf{\@name}}}\hfil
     \nameskip\break
   \endgroup
 }
@@ -106,7 +107,7 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  \MakeUppercase{\textbf{#1}} % Section title
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
