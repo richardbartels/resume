@@ -1,9 +1,11 @@
 # CV 
 
-This repository contains my CV in LaTeX.
+This repository contains my CV in LaTeX. 
 
 ## GitHub actions
 We build the CV using a [GitHub action](https://github.com/marketplace/actions/github-action-for-latex) to compile LaTeX.
+
+Locally it can be generated using `. ./make_local.sh`.
 
 ## Licence CV template
 The CV template is adapted from
